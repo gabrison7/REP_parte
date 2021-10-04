@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amonestaci&oacute;n</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form action="./Registro" method="post">
+        <table id="tabla1" align="left">
+            <tr>
+                <td>IES AUGUSTÓBRIGA</td>
+            </tr>
+            <tr>
+                <td><p id="p-ies">Comunicación a padres</p></td>
+            </tr>
+        </table>
+        
+        <table id="tabla">
+            <tr>
+                <td>C/Antonio Concha, 71</td>
+            </tr>
+            <tr>
+                <td>10300 Navalmoral de la Mata (Cáceres)</td>
+            </tr>
+            <tr>
+                <td>Tlf: 927 016890 Fax: 927 01 68 92</td>
+            </tr>
+            <tr>
+                <td>http://iesaugustobriga.educarex.es/</td>
+            </tr>
+        </table>
+        <h5>Amonestación por conducta contraria a las normas de convivencia</h5>
+        <p id="inicio">
+            Sr. De <input type="text" id="senor"><br>
+            C/Pl/Avda <input type="text" id="direccionInicio"><br>
+            CP <input type="text" id="cp"><br>
+            Ciudad <input type="text" id="ciudad">
+        </p>
+        <h1>ASUNTO: Amonestación por conducta contraria a las normas de convivencia</h1>
+        <p id="principal">
+            Muy señores nuestros:
+            En consonancia con el decreto 50/2007, de 20 de marzo, por el que se establecen
+            los derechos y deberes <br> del alumno y normas de convivencia en los centros docentes,
+            nos ponemos ben contacto con ustedes para informarles del comportamiento <br> que su hijo/a
+            <textarea name="hijo" id="hijo" cols="70" rows="1 "></textarea> del curso <input type="text" id="curso">, ha tenido
+            <br> en el centro el día (fecha en el que sucede la conducta contraria): 
+            <input type="date" name="fecha" id="fecha">
+            <textarea name="motivos" id="motivos" cols="130" rows="10 "></textarea>
+            
+            <br><br><br>
+
+            Siguiendo el citado decreto, su hijo/a recibe este apercibimiento por escrito. Del cual se guarda
+            copia en el informe individual del alumno.
+
+            <br><br><br>
+
+            Se llama a la familia el día 
+            <input type="date" name="diaCita" id="diaCita">
+            a las 
+            <input type="time" name="horaCita" id="horaCita">
+            horas.<br>
+            Persona a la que se comunica la amonestación 
+            <textarea name="hijo" id="persona" cols="84" rows="1 "></textarea><br>
+            (si no se ha contactado, se señalará igualmente).
+
+            <br><br><br>
+
+            Para cualquier aclaración, póngase en contacto con el Centro.
+
+            <h2>Navalmoral de la Mata, a <input type="date" id="fechaFirma"></h2>
+
+            <br><br><br><br>
+
+            Fdo. Raúl Garrido Jiménez <br>
+            Jefe de Estudios
+
+            <h3>Fdo. 
+            <input type="text" id="firmaProf"><br>
+            Profesor de 
+            <input type="text">
+            </h3>
+        </p>
+
+        <p id="letraPeq">
+        <h4>R.O.F. Art, 23 (D. y D.37.4)</h4>
+        Las conductas contrarias a las normas de convivencia determinadas en este
+        artículo prescribirán en el plazo de sesenta días naturales contados a <br>partir 
+        de la fecha de su comisión, excluyendo los periodos vacacionales establecidos 
+        en el correspondiente calendario escolar.
+        <h4>R.O.F. Art, 33 (D. y D.40.2)</h4>
+        Las conductas gravemente perjudiciales para la convivencia en el Centro prescribirán
+        a los cuatro meses contados a partir de la fecha de su comisión, excluyendo los periodos
+        vacacionales establecidos en el calendario escolar.
+        </p>
+        
+        <input type="submit" value="Enviar datos"></input>
+    </form>
+</body>
+</html>
