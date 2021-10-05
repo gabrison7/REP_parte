@@ -57,4 +57,33 @@ public static int guardarAmonestacion(ParteVO parte) {
 		return estado;
 	}
 
+public static int eliminarAmonestacion(int id){
+	int status=0;
+	try{
+		Connection con=ParteDAO.obtenerConexion();
+		PreparedStatement ps=con.prepareStatement("delete from partes where id=?");
+		ps.setInt(1,id);
+		status=ps.executeUpdate();
+		
+		con.close();
+	}catch(Exception e){e.printStackTrace();}
+	
+	return status;
+}
+
+public static int eliminarAmonestacion(ParteVO parte){
+	int status=0;
+	try{ 
+		Connection con=ParteDAO.obtenerConexion();
+		PreparedStatement ps=con.prepareStatement("delete from partes where id=?");
+		ps.setInt(1,parte.getId());
+		status=ps.executeUpdate();
+		
+		con.close();
+	}catch(Exception e){e.printStackTrace();}
+	
+	return status;
+}
+
+
 }
