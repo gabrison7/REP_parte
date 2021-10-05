@@ -45,23 +45,10 @@ public class RegistroParte extends HttpServlet {
 		String persona = request.getParameter("persona");
 		String fechaFirma = request.getParameter("fechaFirma");
 		String firmaProf = request.getParameter("firmaProf");
-		
-			/*
-			response.setContentType("text/html");
-			PrintWriter salida = response.getWriter();
-			salida.println(senor);
-			salida.println(direccion);
-			salida.println(cp);
-			salida.println(ciudad);
-			*/
-		
+				
 			ParteVO parte = new ParteVO(0, senor, direccion, cp, ciudad, nombreHijo, curso, fecha, motivos, diaCita, horaCita, persona, fechaFirma, firmaProf);
 			ParteDAO.guardarAmonestacion(parte);
 			
-			/*
-			RequestDispatcher rd = request.getRequestDispatcher("index.html");
-			rd.include(request, response);
-			*/
 	}
 
 	/**

@@ -1,13 +1,18 @@
 
 body{
-    background-color: rgb(38, 142, 212);
+    background-color: lightgreen;
+}
+
+header{
+	text-align: center;
+	align-content: center;
 }
 
 #tabla1{
-    border: 5px solid red;
+    border: 3px solid black;
     border-radius: 20px;
-    background-color: rgb(11, 8, 163);
-    color: rgb(211, 198, 12);
+    background-color: white;
+    color: black;
     font-size: 0.7cm;
     width: 300px;
     height: 177px;
@@ -16,13 +21,13 @@ body{
 
 
 #tabla{
-    border: 5px solid red;
+    border: 3px solid black;
     border-radius: 20px;
-    background-color: rgb(11, 8, 163);
-    color: rgb(211, 198, 12);
+    background-color: white;
+    color: black;
     font-size: 0.7cm;
     width: 450px;
-    height: 177px;
+    height: 220px;
 }
 
 #inicio{

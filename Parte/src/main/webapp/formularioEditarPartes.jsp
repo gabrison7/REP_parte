@@ -1,22 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="dao.ParteDAO, vo.ParteVO" %>
+<jsp:useBean id="e" class="vo.ParteVO"></jsp:useBean>
+<jsp:setProperty property="id" name="e"></jsp:setProperty>
+    
+<%
+int id = e.getId();
+ParteVO parte = ParteDAO.obtenerPartesId(id);
+%>
+    
+    
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amonestaci&oacute;n</title>
-    <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-    <form action="guardarParte.jsp" method="post">
+
+<form action="guardarParte.jsp" method="post">
     
         <header><img src="logo.jpg"></img></header>
         
         <h5>Amonestación por conducta contraria a las normas de convivencia</h5>
         <p id="inicio">
-            Sr. De <input type="text" id="senor"><br>
-            C/Pl/Avda <input type="text" id="direccionInicio"><br>
-            CP <input type="text" id="cp"><br>
-            Ciudad <input type="text" id="ciudad">
+            Sr. De <input type="text" id="senor" value<%= e.getSenor()%>><br>
+            C/Pl/Avda <input type="text" id="direccionInicio" value<%= e.getDireccion() %>><br>
+            CP <input type="text" id="cp" <%= e.getCp() %>><br>
+            Ciudad <input type="text" id="ciudad" <%= e.getCiudad() %>>
         </p>
         <h1>ASUNTO: Amonestación por conducta contraria a las normas de convivencia</h1>
         <p id="principal">
@@ -24,10 +36,10 @@
             En consonancia con el decreto 50/2007, de 20 de marzo, por el que se establecen
             los derechos y deberes <br> del alumno y normas de convivencia en los centros docentes,
             nos ponemos ben contacto con ustedes para informarles del comportamiento <br> que su hijo/a
-            <textarea name="hijo" id="hijo" cols="70" rows="1 "></textarea> del curso <input type="text" id="curso">, ha tenido
+            <textarea name="hijo" id="hijo" cols="70" rows="1 " value<%= e.getAlumno() %>></textarea> del curso <input type="text" id="curso" value<%= e.getCurso() %>>, ha tenido
             <br> en el centro el día (fecha en el que sucede la conducta contraria): 
-            <input type="date" name="fecha" id="fecha">
-            <textarea name="motivos" id="motivos" cols="130" rows="10 "></textarea>
+            <input type="date" name="fecha" id="fecha" value<%= e.getFecha() %>>
+            <textarea name="motivos" id="motivos" cols="130" rows="10" value<%= e.getMotivos() %>></textarea>
             
             <br><br><br>
 
@@ -37,19 +49,19 @@
             <br><br><br>
 
             Se llama a la familia el día 
-            <input type="date" name="diaCita" id="diaCita">
+            <input type="date" name="diaCita" id="diaCita" value<%= e.getDiaCita() %>>
             a las 
-            <input type="time" name="horaCita" id="horaCita">
+            <input type="time" name="horaCita" id="horaCita" value<%= e.getHoraCita() %>>
             horas.<br>
             Persona a la que se comunica la amonestación 
-            <textarea name="hijo" id="persona" cols="84" rows="1 "></textarea><br>
+            <textarea name="hijo" id="persona" cols="84" rows="1" value<%= e.getPersona() %>></textarea><br>
             (si no se ha contactado, se señalará igualmente).
 
             <br><br><br>
 
             Para cualquier aclaración, póngase en contacto con el Centro.
 
-            <h2>Navalmoral de la Mata, a <input type="date" id="fechaFirma"></h2>
+            <h2>Navalmoral de la Mata, a <input type="date" id="fechaFirma" value<%= e.getFechaFirma() %>></h2>
 
             <br><br><br><br>
 
@@ -57,7 +69,7 @@
             Jefe de Estudios
 
             <h3>Fdo. 
-            <input type="text" id="firmaProf"><br>
+            <input type="text" id="firmaProf" value<%= e.getProfesorFirma() %>><br>
             </h3>
         </p>
 
@@ -75,5 +87,6 @@
         
         <input type="submit" value="Enviar datos"></input><input type="reset" value="ELiminar"></input>
     </form>
+
 </body>
 </html>
