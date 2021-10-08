@@ -104,7 +104,7 @@ public class ParteDAO {
 
 		try {
 			Connection conexion = ParteDAO.obtenerConexion();
-			PreparedStatement ps = conexion.prepareStatement("DELETE FROM partes WHERE id=?");
+			PreparedStatement ps = conexion.prepareStatement("DELETE * FROM partes WHERE id=?");
 			ps.setInt(1, parte.getId());
 
 			estado = ps.executeUpdate();
@@ -122,7 +122,7 @@ public class ParteDAO {
 
 		try {
 			Connection conexion = ParteDAO.obtenerConexion();
-			PreparedStatement ps = conexion.prepareStatement("SELECT FROM partes WHERE id=?");
+			PreparedStatement ps = conexion.prepareStatement("SELECT * FROM partes WHERE id=?");
 			ps.setInt(1, id);
 			ResultSet resultado = ps.executeQuery();
 

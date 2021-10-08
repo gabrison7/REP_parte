@@ -36,7 +36,7 @@ public class RegistroParte extends HttpServlet {
 		String direccion = request.getParameter("direccionInicio");
 		String cp = request.getParameter("cp");
 		String ciudad = request.getParameter("ciudad");
-		String nombreHijo = request.getParameter("hijo");
+		String hijo = request.getParameter("hijo");
 		String curso = request.getParameter("curso");
 		String fecha = request.getParameter("fecha");
 		String motivos = request.getParameter("motivos");
@@ -46,7 +46,7 @@ public class RegistroParte extends HttpServlet {
 		String fechaFirma = request.getParameter("fechaFirma");
 		String firmaProf = request.getParameter("firmaProf");
 				
-			ParteVO parte = new ParteVO(0, senor, direccion, cp, ciudad, nombreHijo, curso, fecha, motivos, diaCita, horaCita, persona, fechaFirma, firmaProf);
+			ParteVO parte = new ParteVO(0, senor, direccion, cp, ciudad, hijo, curso, fecha, motivos, diaCita, horaCita, persona, fechaFirma, firmaProf);
 			ParteDAO.guardarAmonestacion(parte);
 			
 	}

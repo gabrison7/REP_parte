@@ -38,7 +38,7 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
             nos ponemos ben contacto con ustedes para informarles del comportamiento <br> que su hijo/a
             <textarea name="hijo" id="hijo" cols="70" rows="1 " value<%= e.getAlumno() %>></textarea> del curso <input type="text" id="curso" value<%= e.getCurso() %>>, ha tenido
             <br> en el centro el día (fecha en el que sucede la conducta contraria): 
-            <input type="date" name="fecha" id="fecha" value<%= e.getFecha() %>>
+            <input type="text" name="fecha" id="fecha" value<%= e.getFecha() %>>
             <textarea name="motivos" id="motivos" cols="130" rows="10" value<%= e.getMotivos() %>></textarea>
             
             <br><br><br>
@@ -49,9 +49,9 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
             <br><br><br>
 
             Se llama a la familia el día 
-            <input type="date" name="diaCita" id="diaCita" value<%= e.getDiaCita() %>>
+            <input type="text" name="diaCita" id="diaCita" value<%= e.getDiaCita() %>>
             a las 
-            <input type="time" name="horaCita" id="horaCita" value<%= e.getHoraCita() %>>
+            <input type="text" name="horaCita" id="horaCita" value<%= e.getHoraCita() %>>
             horas.<br>
             Persona a la que se comunica la amonestación 
             <textarea name="hijo" id="persona" cols="84" rows="1" value<%= e.getPersona() %>></textarea><br>
@@ -61,7 +61,7 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
 
             Para cualquier aclaración, póngase en contacto con el Centro.
 
-            <h2>Navalmoral de la Mata, a <input type="date" id="fechaFirma" value<%= e.getFechaFirma() %>></h2>
+            <h2>Navalmoral de la Mata, a <input type="text" id="fechaFirma" value<%= e.getFechaFirma() %>></h2>
 
             <br><br><br><br>
 
