@@ -1,0 +1,16 @@
+CREATE TABLE `parte`.`new_table` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `senor` VARCHAR(45) NULL,
+  `direccion` VARCHAR(45) NULL,
+  `cp` VARCHAR(45) NULL,
+  `ciudad` VARCHAR(45) NULL,
+  `alumno` VARCHAR(45) NULL,
+  `curso` VARCHAR(45) NULL,
+  `fecha` VARCHAR(45) NULL,
+  `motivos` VARCHAR(300) NULL,
+  `diaCita` VARCHAR(45) NULL,
+  `horaCita` VARCHAR(45) NULL,
+  `persona` VARCHAR(45) NULL,
+  `fechaFirma` VARCHAR(45) NULL,
+  `profesorFirma` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
