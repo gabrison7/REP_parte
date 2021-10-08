@@ -60,8 +60,8 @@ System.out.println(lista.size());
 	
 	
 	
-	<td><a href="formularioEditarPartes.jsp?id=${parte.getId()}"><i class="fa fa-edit"></i></a></td>
-	<td><a href="eliminarParte.jsp?id=${parte.getId()}"><i class="fa fa-trash"></i></a></td>
+	<td><a href="formularioEditarPartes.jsp?id=${parte.getId()}"><i class="fa fa-edit"></i><input type="button" value="Editar"></a></td>
+	<td><a href="eliminarParte.jsp?id=${parte.getId()}"><i class="fa fa-trash"></i><input type="button" value="Eliminar"></a></td>
 </tr>
 </c:forEach>
 

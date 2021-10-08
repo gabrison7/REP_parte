@@ -25,10 +25,10 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
         
         <h5>Amonestación por conducta contraria a las normas de convivencia</h5>
         <p id="inicio">
-            Sr. De <input type="text" id="senor" value<%= e.getSenor()%>><br>
-            C/Pl/Avda <input type="text" id="direccionInicio" value<%= e.getDireccion() %>><br>
-            CP <input type="text" id="cp" <%= e.getCp() %>><br>
-            Ciudad <input type="text" id="ciudad" <%= e.getCiudad() %>>
+            Sr. De <input type="text" name="senor" id="senor" value<%= e.getSenor() %>><br>
+            C/Pl/Avda <input type="text" name="direccionInicio" id="direccionInicio" value<%= e.getDireccion() %>><br>
+            CP <input type="text" id="cp" name="cp" <%= e.getCp() %>><br>
+            Ciudad <input type="text" id="ciudad" name="ciudad" <%= e.getCiudad() %>>
         </p>
         <h1>ASUNTO: Amonestación por conducta contraria a las normas de convivencia</h1>
         <p id="principal">
@@ -54,14 +54,14 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
             <input type="text" name="horaCita" id="horaCita" value<%= e.getHoraCita() %>>
             horas.<br>
             Persona a la que se comunica la amonestación 
-            <textarea name="hijo" id="persona" cols="84" rows="1" value<%= e.getPersona() %>></textarea><br>
+            <textarea name="persona" id="persona" cols="84" rows="1" value<%= e.getPersona() %>></textarea><br>
             (si no se ha contactado, se señalará igualmente).
 
             <br><br><br>
 
             Para cualquier aclaración, póngase en contacto con el Centro.
 
-            <h2>Navalmoral de la Mata, a <input type="text" id="fechaFirma" value<%= e.getFechaFirma() %>></h2>
+            <h2>Navalmoral de la Mata, a <input type="text" id="fechaFirma" name="fechaFirma" value<%= e.getFechaFirma() %>></h2>
 
             <br><br><br><br>
 
@@ -69,7 +69,7 @@ ParteVO parte = ParteDAO.obtenerPartesId(id);
             Jefe de Estudios
 
             <h3>Fdo. 
-            <input type="text" id="firmaProf" value<%= e.getProfesorFirma() %>><br>
+            <input type="text" id="firmaProf" name="firmaProf" value<%= e.getProfesorFirma() %>><br>
             </h3>
         </p>
 
