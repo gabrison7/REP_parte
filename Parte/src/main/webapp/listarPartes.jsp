@@ -37,8 +37,6 @@ System.out.println(lista.size());
 	<th>Persona</th>
 	<th>FechaFirma</th>
 	<th>ProfesorFirma</th>
-	<th>Editar</th>
-	<th>Eliminar</th>
 </tr>
 
 <c:forEach items="${lista}" var="parte">
